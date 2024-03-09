@@ -1,0 +1,91 @@
+body{
+  background-color: #a6c1df;
+}
+nav {
+  background-color: #205792;
+  padding: 20px 20px;
+}
+
+/* Estilo para los enlaces de navegación */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f8f9fa; /* Cambiar el color al pasar el ratón por encima */
+}
+
+/* Estilo para el enlace activo */
+nav a.active {
+  font-weight: bold;
+}
+
+/* NEW */
+h2{
+  font-size: 40px;
+}
+.titulo {
+  font-size: 20px;
+}
+.cuadro{
+  font-weight: bold;
+    margin-bottom: 2px;
+    color: #555;
+    width: 97%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+textarea{
+  margin-top: 10px;
+}
+p{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+}
+.boton{
+  max-width: 400px;
+  margin: 0 auto;
+  color: #000;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-left: 30px;
+  margin-top: -50px;
+}
+.separador{
+  margin-top: 60px;
+}
+button{
+  max-width: 400px;
+  margin: 0 auto;
+  color: #000;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.title{
+  font-size: 17px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+}
