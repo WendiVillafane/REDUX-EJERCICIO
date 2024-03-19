@@ -1,6 +1,9 @@
+// TodoNew.jsx
 import React, { useState } from 'react';
-
-function TodoNew({ onTodoAdd }) {
+import { useDispatch } from 'react-redux'; 
+import { addTodo } from './Todo';
+function TodoNew() {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [creationDate, setCreationDate] = useState('');
@@ -19,20 +22,16 @@ function TodoNew({ onTodoAdd }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Crear un objeto con los datos del nuevo todo
     const newTodo = {
       title: title,
       description: description,
-      creationDate: creationDate
+      creationDate: creationDate,
     };
-    // Llamar a la función proporcionada por las props para agregar el nuevo todo al estado de la aplicación
-    onTodoAdd(newTodo);
-    // Limpiar los campos del formulario
+    dispatch(addTodo(newTodo)); 
     setTitle('');
     setDescription('');
     setCreationDate('');
   };
-  
 
   return (
     <div>

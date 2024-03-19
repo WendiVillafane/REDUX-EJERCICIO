@@ -1,9 +1,14 @@
 // TodoDetail.jsx
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux'; 
 import { useParams, Link } from 'react-router-dom';
+import { deleteTodo } from './Todo';
 
-const TodoDetail = ({ todos, onDelete }) => {
+const TodoDetail = () => {
   const { index } = useParams();
+  const todos = useSelector((state) => state.todos);
+  const dispatch = useDispatch(); 
+
   const todo = todos[parseInt(index)];
 
   if (!todo) {
@@ -15,13 +20,17 @@ const TodoDetail = ({ todos, onDelete }) => {
     );
   }
 
+  const handleDelete = () => {
+    dispatch(deleteTodo(parseInt(index))); 
+  };
+
   return (
     <div>
       <h2>Detalles de la Tarea</h2>
       <p><strong>Título:</strong> {todo.title}</p>
       <p><strong>Descripción:</strong> {todo.description}</p>
       <p><strong>Fecha de Creación:</strong> {todo.creationDate}</p>
-      <button onClick={() => onDelete(parseInt(index))}>Eliminar</button>
+      <button onClick={handleDelete}>Eliminar</button>
       <Link className='boton' to="/todolist">Volver a la lista de tareas</Link>
     </div>
   );

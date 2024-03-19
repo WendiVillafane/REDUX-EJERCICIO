@@ -1,8 +1,11 @@
 // TodoList.jsx
 import React from 'react';
+import { useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
 
-const TodoList = ({ todos, onViewDetails }) => {
+const TodoList = () => {
+  const todos = useSelector((state) => state.todos);
+
   return (
     <div>
       <h2>Lista de Tareas</h2>
